@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" name="CSV2SQL" packages="">
+    <Appenders>
+        <File name="CSV2SQL" fileName="target/log/CSV2SQL.log">
+            <PatternLayout>
+                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+            </PatternLayout>
+        </File>
+        <Async name="Async">
+            <AppenderRef ref="CSV2SQL"/>
+        </Async>
+    </Appenders>
+    <Loggers>
+        <Root level="trace">
+            <AppenderRef ref="Async"/>
+        </Root>
+    </Loggers>
+</Configuration>
